@@ -51,7 +51,7 @@
 45. [逻辑：线性](https://plato.stanford.edu/entries/logic-linear/) (logic: linear)
 46. [多类逻辑](https://plato.stanford.edu/entries/logic-many-sorted/) (many-sorted)
 47. [多值逻辑](https://plato.stanford.edu/entries/logic-manyvalued/) (many-valued)
-48. [模态逻辑](https://plato.stanford.edu/entries/logic-modal/) (modal)
+48. [模态逻辑](https://github.com/wxflogic/SEP-logic/blob/master/logic-modal.md) ([modal logic](https://plato.stanford.edu/entries/logic-modal/))
 49. [非单调逻辑](https://plato.stanford.edu/entries/logic-nonmonotonic/) (non-monotonic)
 50. [信念修正逻辑](https://plato.stanford.edu/entries/logic-belief-revision/) (of belief revision)
 51. [次协调逻辑](https://plato.stanford.edu/entries/logic-paraconsistent/) (paraconsistent)
