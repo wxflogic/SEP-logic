@@ -1,13 +1,13 @@
-# 斯坦福哲学百科：逻辑学相关词条索引及精选翻译
+# 斯坦福哲学百科：逻辑学相关词条索引
 
-本文件包含斯坦福哲学百科全书（SEP）中所有包含“Logic”关键词或以“logic-”开头的词条列表，并附带中文标题翻译。此外，还包含了核心词条“经典逻辑”（Classical Logic）的完整翻译。
+本文件包含斯坦福哲学百科全书（SEP）中所有与逻辑相关的词条列表。
 
 ## 逻辑学相关词条索引 (共68条)
 
 1. [逻辑代数传统](https://plato.stanford.edu/entries/algebra-logic-tradition/) (algebra of logic tradition)
 2. [悖论与当代逻辑](https://plato.stanford.edu/entries/paradoxes-contemporary-logic/) (and contemporary logic)
 3. [麦利：道义逻辑](https://plato.stanford.edu/entries/mally-deontic/) (deontic logic)
-4. [对话逻辑](https://plato.stanford.edu/entries/logic-dialogical/) (dialogical)
+4. [对话逻辑]() ([dialogical logic](https://plato.stanford.edu/entries/logic-dialogical/))
 5. [一阶逻辑的出现](https://plato.stanford.edu/entries/logic-firstorder-emergence/) (first-order logic)
 6. [伊本·西那：逻辑](https://plato.stanford.edu/entries/ibn-sina-logic/) (Ibn Sina: logic)
 7. [莱布尼茨对19世纪逻辑的影响](https://plato.stanford.edu/entries/leibniz-logic-influence/) (influence on 19th century logic)
@@ -18,16 +18,16 @@
 12. [皮尔士：逻辑](https://plato.stanford.edu/entries/peirce-logic/) (logic)
 13. [早期中国哲学中的逻辑与语言](https://plato.stanford.edu/entries/chinese-logic-language/) (logic and language in Early Chinese Philosophy)
 14. [逻辑与本体论](https://plato.stanford.edu/entries/logic-ontology/) (logic and ontology)
-15. [逻辑史：直觉主义逻辑](https://plato.stanford.edu/entries/intuitionistic-logic-development/) (logic, history of: intuitionistic logic)
+15. [逻辑史：直觉主义逻辑](https://plato.stanford.edu/entries/intuitionistic-logic-development/) (History of Intuitionistic Logic)
 16. [逻辑的规范地位](https://plato.stanford.edu/entries/logic-normative/) (logic, normative status of)
-17. [人工智能：基于逻辑的方法](https://plato.stanford.edu/entries/logic-ai/) (logic-based)
+17. [人工智能：基于逻辑的方法](https://plato.stanford.edu/entries/logic-ai/) (Logic-based AI)
 18. [逻辑：行动](https://plato.stanford.edu/entries/logic-action/) (logic: action)
 19. [逻辑：代数命题](https://plato.stanford.edu/entries/logic-algebraic-propositional/) (algebraic propositional)
 20. [逻辑：古代](https://plato.stanford.edu/entries/logic-ancient/) (ancient)
 21. [逻辑：与博弈](https://plato.stanford.edu/entries/logic-games/) (logic: and games)
 22. [逻辑：与信息](https://plato.stanford.edu/entries/logic-information/) (logic: and information)
 23. [逻辑与概率](https://plato.stanford.edu/entries/logic-probability/) (and probability)
-24. [经典逻辑](https://plato.stanford.edu/entries/logic-classical/) (classical)
+24. [经典逻辑]([Classical Logic](https://plato.stanford.edu/entries/logic-classical/))
 25. [组合逻辑](https://plato.stanford.edu/entries/logic-combinatory/) (combinatory)
 26. [组合逻辑系统](https://plato.stanford.edu/entries/logic-combining/) (combining)
 27. [逻辑：条件句](https://plato.stanford.edu/entries/logic-conditionals/) (logic: conditionals)
@@ -64,7 +64,7 @@
 58. [亚结构逻辑](https://plato.stanford.edu/entries/logic-substructural/) (substructural)
 59. [时态逻辑](https://plato.stanford.edu/entries/logic-temporal/) (temporal)
 60. [质量表达的逻辑](https://plato.stanford.edu/entries/logic-massexpress/) (mass expressions: logic of)
-61. [逻辑史：模态逻辑](https://plato.stanford.edu/entries/logic-modal-origins/) (modal logic)
+61. [模态逻辑的起源]([Origins of Modal Logic](https://plato.stanford.edu/entries/logic-modal-origins/))
 62. [多模态逻辑：哲学方面](https://plato.stanford.edu/entries/phil-multimodallogic/) (multi-modal logic, philosophical aspects of)
 63. [逻辑中的自然演绎系统](https://plato.stanford.edu/entries/natural-deduction/) (natural deduction systems in logic)
 64. [语言与逻辑哲学](https://plato.stanford.edu/entries/arabic-islamic-language/) (philosophy of language and logic)
