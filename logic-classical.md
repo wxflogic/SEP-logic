@@ -90,7 +90,7 @@ $$ Pa, \quad Qx, \quad Rab, \quad Aabc $$
 
 我们现在引入词汇表的最后几项：
 
-$$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \forall, \quad \exists, \quad (, \quad ) $$
+$$ \neg, \quad \land, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \forall, \quad \exists, \quad (, \quad ) $$
 
 我们给出 $\mathcal{L}1K=$ 的*公式*的递归定义：
 
@@ -99,9 +99,9 @@ $$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \
 
 对应于 $\neg \theta$ 的公式因此表示“并非 $\theta$ 的情况”。符号“$\neg$”称为“否定”，是一个一元联结词。
 
-3. 如果 $\theta$ 和 $\psi$ 是 $\mathcal{L}1K=$ 的公式，那么 $(\theta \& \psi)$ 也是。
+3. 如果 $\theta$ 和 $\psi$ 是 $\mathcal{L}1K=$ 的公式，那么 $(\theta \land \psi)$ 也是。
 
-符号“$\&$”对应于英语中的“和”（当“和”用于连接句子时）。所以 $(\theta \& \psi)$ 可以读作“$\theta$ 和 $\psi$”。公式 $(\theta \& \psi)$ 称为 $\theta$ 和 $\psi$ 的“合取”。
+符号“$\land$”对应于英语中的“和”（当“和”用于连接句子时）。所以 $(\theta \land \psi)$ 可以读作“$\theta$ 和 $\psi$”。公式 $(\theta \land \psi)$ 称为 $\theta$ 和 $\psi$ 的“合取”。
 
 4. 如果 $\theta$ 和 $\psi$ 是 $\mathcal{L}1K=$ 的公式，那么 $(\theta \vee \psi)$ 也是。
 
@@ -111,7 +111,7 @@ $$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \
 
 箭头“$\rightarrow$”大致对应于“如果...那么...”，所以 $(\theta \rightarrow \psi)$ 可以读作“如果 $\theta$ 那么 $\psi$”或“$\theta$ 仅当 $\psi$”。
 
-符号“$\&$”、“$\vee$”和“$\rightarrow$”称为“二元联结词”，因为它们用于将两个公式“连接”成一个。一些作者引入 $(\theta \leftrightarrow \psi)$ 作为 $((\theta \rightarrow \psi) \& (\psi \rightarrow \theta))$ 的缩写。符号“$\leftrightarrow$”是“当且仅当”这一短语的类似物。
+符号“$\land$”、“$\vee$”和“$\rightarrow$”称为“二元联结词”，因为它们用于将两个公式“连接”成一个。一些作者引入 $(\theta \leftrightarrow \psi)$ 作为 $((\theta \rightarrow \psi) \land (\psi \rightarrow \theta))$ 的缩写。符号“$\leftrightarrow$”是“当且仅当”这一短语的类似物。
 
 6. 如果 $\theta$ 是 $\mathcal{L}1K=$ 的公式且 $v$ 是一个变项，那么 $\forall v \theta$ 是 $\mathcal{L}1K=$ 的公式。
 
@@ -129,9 +129,9 @@ $$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \
 
 > **证明**：根据条款 (8)，每个公式都是使用条款 (2)–(7) 从原子公式构建的。原子公式没有括号。括号仅在条款 (3)–(5) 中引入，每次它们都是作为匹配的集合引入的。所以在公式构造的任何阶段，括号都是成对出现的。
 
-我们接下来定义公式中变项出现的*自由*或*约束*的概念。紧跟在量词后面的变项（如在“$\forall x$”和“$\exists y$”中）既不是自由的也不是约束的。我们甚至不认为那是变项的出现。出现在原子公式中的所有变项都是自由的。如果一个变项在 $\theta$ 或 $\psi$ 中自由（或约束）出现，那么同一出现也在 $\neg \theta, (\theta \& \psi), (\theta \vee \psi)$ 和 $(\theta \rightarrow \psi)$ 中是自由（或约束）的。也就是说，（一元和二元）联结词不会改变其中出现的变项的状态。变项 $v$ 在 $\theta$ 中的所有出现在 $\forall v \theta$ 和 $\exists v \theta$ 中都是约束的。$v$ 在 $\theta$ 中的任何*自由*出现都被初始量词约束。出现在 $\theta$ 中的所有其他变项在 $\forall v \theta$ 和 $\exists v \theta$ 中是自由或约束的，正如它们在 $\theta$ 中一样。
+我们接下来定义公式中变项出现的*自由*或*约束*的概念。紧跟在量词后面的变项（如在“$\forall x$”和“$\exists y$”中）既不是自由的也不是约束的。我们甚至不认为那是变项的出现。出现在原子公式中的所有变项都是自由的。如果一个变项在 $\theta$ 或 $\psi$ 中自由（或约束）出现，那么同一出现也在 $\neg \theta, (\theta \land \psi), (\theta \vee \psi)$ 和 $(\theta \rightarrow \psi)$ 中是自由（或约束）的。也就是说，（一元和二元）联结词不会改变其中出现的变项的状态。变项 $v$ 在 $\theta$ 中的所有出现在 $\forall v \theta$ 和 $\exists v \theta$ 中都是约束的。$v$ 在 $\theta$ 中的任何*自由*出现都被初始量词约束。出现在 $\theta$ 中的所有其他变项在 $\forall v \theta$ 和 $\exists v \theta$ 中是自由或约束的，正如它们在 $\theta$ 中一样。
 
-例如，在公式 $(\forall x(Axy \vee Bx) \& Bx)$ 中，“$x$”在 $Axy$ 和第一个 $Bx$ 中的出现被量词约束。“$y$”的出现和“$x$”的最后一次出现是自由的。在 $\forall x(Ax \rightarrow \exists xBx)$ 中，$Ax$ 中的“$x$”被初始全称量词约束，而 $x$ 的另一次出现被存在量词约束。上述句法允许这种“双重约束”。虽然它不会产生任何歧义（见下文），但为了品味和清晰起见，我们将避免此类公式。
+例如，在公式 $(\forall x(Axy \vee Bx) \land Bx)$ 中，“$x$”在 $Axy$ 和第一个 $Bx$ 中的出现被量词约束。“$y$”的出现和“$x$”的最后一次出现是自由的。在 $\forall x(Ax \rightarrow \exists xBx)$ 中，$Ax$ 中的“$x$”被初始全称量词约束，而 $x$ 的另一次出现被存在量词约束。上述句法允许这种“双重约束”。虽然它不会产生任何歧义（见下文），但为了品味和清晰起见，我们将避免此类公式。
 
 句法还允许所谓的空约束，如 $\forall xBc$。在下文中也将避免这种情况。一些逻辑处理在句法上排除了空约束和双重约束。这简化了下面的一些处理，并使其他处理复杂化。
 
@@ -145,7 +145,7 @@ $$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \
 
 > John is married, and Mary is single, or Joe is crazy.
 
-它可以意味着约翰已婚，并且玛丽单身或乔疯了；或者它可以意味着约翰已婚且玛丽单身，或者乔疯了。像这样的歧义，由于解析同一句子的方式不同，有时被称为“结构歧义”（amphiboly）。如果我们的形式语言中没有括号，它就会有结构歧义。例如，会有一个“公式” $A \& B \vee C$。这应该是 $((A \& B) \vee C)$，还是 $(A \& (B \vee C))$？括号解决了本可能成为结构歧义的问题。
+它可以意味着约翰已婚，并且玛丽单身或乔疯了；或者它可以意味着约翰已婚且玛丽单身，或者乔疯了。像这样的歧义，由于解析同一句子的方式不同，有时被称为“结构歧义”（amphiboly）。如果我们的形式语言中没有括号，它就会有结构歧义。例如，会有一个“公式” $A \land B \vee C$。这应该是 $((A \land B) \vee C)$，还是 $(A \land (B \vee C))$？括号解决了本可能成为结构歧义的问题。
 
 我们可以确定我们的语言中没有其他结构歧义吗？也就是说，我们可以确定 $\mathcal{L}1K=$ 的每个公式只能以一种方式组合吗？我们的下一个任务是回答这个问题。
 
@@ -171,9 +171,9 @@ $$ \neg, \quad \&, \quad \vee, \quad \rightarrow, \quad \leftrightarrow, \quad \
 
 > **定理 6**。设 $\theta$ 是 $\mathcal{L}1K=$ 的任意公式。如果 $\theta$ 不是原子的，则在 (2)–(7) 中有且仅有一个是用于构造 $\theta$ 的最后一个条款。也就是说，$\theta$ 不可能是由两个不同的条款生成的。此外，由条款 (2)–(7) 生成的公式都不是原子的。
 
-> **证明**：根据条款 (8)，要么 $\theta$ 是原子的，要么它是由 (2)–(7) 之一生成的。因此，$\theta$ 中的第一个符号必须是谓词字母、词项、一元标记或左括号。如果 $\theta$ 中的第一个符号是谓词字母或词项，则 $\theta$ 是原子的。在这种情况下，$\theta$ 不是由 (2)–(7) 中的任何一个生成的，因为所有这些公式都以谓词字母或词项以外的内容开头。如果 $\theta$ 中的第一个符号是否定符号“$\neg$”，那么 $\theta$ 是由条款 (2) 生成的，而不是由任何其他条款生成的（因为其他条款生成的公式以量词或左括号开头）。同样，如果 $\theta$ 以全称量词开头，则它是由条款 (6) 生成的，而不是由任何其他条款生成的；如果 $\theta$ 以存在量词开头，则它是由条款 (7) 生成的，而不是由任何其他条款生成的。剩下的唯一情况是 $\theta$ 以左括号开头。在这种情况下，它必须是由 (3)–(5) 之一生成的，而不是由任何其他条款生成的。我们只需要排除 $\theta$ 是由 (3)–(5) 中的不止一个生成的可能性。举个例子，假设 $\theta$ 是由 (3) 和 (4) 生成的。那么 $\theta$ 是 $(\psi_1 \& \psi_2)$，且 $\theta$ 也是 $(\psi_3 \vee \psi_4)$，其中 $\psi_1, \psi_2, \psi_3$ 和 $\psi_4$ 本身也是公式。也就是说，$(\psi_1 \& \psi_2)$ 与 $(\psi_3 \vee \psi_4)$ 是同一个公式。根据定理 5，$\psi_1$ 不能是 $\psi_3$ 的真部分，$\psi_3$ 也不能是 $\psi_1$ 的真部分。所以 $\psi_1$ 必须与 $\psi_3$ 是同一个公式。但那样“$\&$”必须与“$\vee$”是同一个符号，这与所有符号都不同的政策相矛盾。所以 $\theta$ 不是同时由条款 (3) 和条款 (4) 生成的。类似的推理可以处理其他组合。
+> **证明**：根据条款 (8)，要么 $\theta$ 是原子的，要么它是由 (2)–(7) 之一生成的。因此，$\theta$ 中的第一个符号必须是谓词字母、词项、一元标记或左括号。如果 $\theta$ 中的第一个符号是谓词字母或词项，则 $\theta$ 是原子的。在这种情况下，$\theta$ 不是由 (2)–(7) 中的任何一个生成的，因为所有这些公式都以谓词字母或词项以外的内容开头。如果 $\theta$ 中的第一个符号是否定符号“$\neg$”，那么 $\theta$ 是由条款 (2) 生成的，而不是由任何其他条款生成的（因为其他条款生成的公式以量词或左括号开头）。同样，如果 $\theta$ 以全称量词开头，则它是由条款 (6) 生成的，而不是由任何其他条款生成的；如果 $\theta$ 以存在量词开头，则它是由条款 (7) 生成的，而不是由任何其他条款生成的。剩下的唯一情况是 $\theta$ 以左括号开头。在这种情况下，它必须是由 (3)–(5) 之一生成的，而不是由任何其他条款生成的。我们只需要排除 $\theta$ 是由 (3)–(5) 中的不止一个生成的可能性。举个例子，假设 $\theta$ 是由 (3) 和 (4) 生成的。那么 $\theta$ 是 $(\psi_1 \land \psi_2)$，且 $\theta$ 也是 $(\psi_3 \vee \psi_4)$，其中 $\psi_1, \psi_2, \psi_3$ 和 $\psi_4$ 本身也是公式。也就是说，$(\psi_1 \land \psi_2)$ 与 $(\psi_3 \vee \psi_4)$ 是同一个公式。根据定理 5，$\psi_1$ 不能是 $\psi_3$ 的真部分，$\psi_3$ 也不能是 $\psi_1$ 的真部分。所以 $\psi_1$ 必须与 $\psi_3$ 是同一个公式。但那样“$\land$”必须与“$\vee$”是同一个符号，这与所有符号都不同的政策相矛盾。所以 $\theta$ 不是同时由条款 (3) 和条款 (4) 生成的。类似的推理可以处理其他组合。
 
-这个结果有时被称为“唯一可读性”。它表明每个公式都是通过各种条款以确切的一种方式从原子公式生成的。如果 $\theta$ 是由条款 (2) 生成的，那么它的*主联结词*是初始的“$\neg$”。如果 $\theta$ 是由条款 (3)、(4) 或 (5) 生成的，那么它的*主联结词*分别是引入的“$\&$”、“$\vee$”或“$\rightarrow$”。如果 $\theta$ 是由条款 (6) 或 (7) 生成的，那么它的*主联结词*是初始量词。我们为这些枯燥的细节道歉。我们包含它们是为了表明句法的精确度和严谨性水平。
+这个结果有时被称为“唯一可读性”。它表明每个公式都是通过各种条款以确切的一种方式从原子公式生成的。如果 $\theta$ 是由条款 (2) 生成的，那么它的*主联结词*是初始的“$\neg$”。如果 $\theta$ 是由条款 (3)、(4) 或 (5) 生成的，那么它的*主联结词*分别是引入的“$\land$”、“$\vee$”或“$\rightarrow$”。如果 $\theta$ 是由条款 (6) 或 (7) 生成的，那么它的*主联结词*是初始量词。我们为这些枯燥的细节道歉。我们包含它们是为了表明句法的精确度和严谨性水平。
 ## 3. 演绎 (Deduction)
 
 我们现在为我们的语言引入一个演绎系统 $D$。如上所述，我们将论证定义为形式语言中非空句子的集合，其中一个被指定为结论。如果论证中还有其他句子，它们就是前提。按照惯例，我们使用“$\Gamma$”、“$\Gamma'$”、“$\Gamma_1$”等来表示句子集合，使用字母“$\phi$”、“$\psi$”、“$\theta$”（大写或小写，带或不带下标）来表示单个句子。我们写“$\Gamma, \Gamma'$”表示 $\Gamma$ 和 $\Gamma'$ 的并集，写“$\Gamma, \phi$”表示 $\Gamma$ 与 $\{\phi\}$ 的并集。
@@ -186,13 +186,13 @@ $D$ 中的规则被选择来匹配与语言中逻辑术语的英语对应物有�
 
 因此我们要有 $\{\phi \} \vdash \phi$；每个前提都由其自身得出。接下来，我们为每个联结词和量词提出两个条款。这些条款指明了如何“引入”和“消除”以每个符号为主联结词的句子。
 
-首先，回想一下“$\&$”是英语联结词“和”（and）的类似物。直观地说，如果人们推导出了 $\theta$ 并且推导出了 $\psi$，那么就可以推导出形式为 $(\theta \& \psi)$ 的句子。反之，人们可以从 $(\theta \& \psi)$ 推导出 $\theta$，也可以从 $(\theta \& \psi)$ 推导出 $\psi$：
+首先，回想一下“$\land$”是英语联结词“和”（and）的类似物。直观地说，如果人们推导出了 $\theta$ 并且推导出了 $\psi$，那么就可以推导出形式为 $(\theta \land \psi)$ 的句子。反之，人们可以从 $(\theta \land \psi)$ 推导出 $\theta$，也可以从 $(\theta \land \psi)$ 推导出 $\psi$：
 
-$(\& \mathrm{I})$
-如果 $\Gamma_1 \vdash \theta$ 且 $\Gamma_2 \vdash \psi$，那么 $\Gamma_1, \Gamma_2 \vdash (\theta \& \psi)$。
+$(\land \mathrm{I})$
+如果 $\Gamma_1 \vdash \theta$ 且 $\Gamma_2 \vdash \psi$，那么 $\Gamma_1, \Gamma_2 \vdash (\theta \land \psi)$。
 
-$(\& \mathrm{E})$
-如果 $\Gamma \vdash (\theta \& \psi)$ 那么 $\Gamma \vdash \theta$；如果 $\Gamma \vdash (\theta \& \psi)$ 那么 $\Gamma \vdash \psi$。
+$(\land \mathrm{E})$
+如果 $\Gamma \vdash (\theta \land \psi)$ 那么 $\Gamma \vdash \theta$；如果 $\Gamma \vdash (\theta \land \psi)$ 那么 $\Gamma \vdash \psi$。
 
 名称“&I”代表“&-引入”；“&E”代表“&-消除”。
 
@@ -255,7 +255,7 @@ $(\neg \mathrm{I})$
 
 反对 *ex falso quodlibet* 的演绎系统被称为次协调的（paraconsistent）。大多数相关逻辑（relevant logics）都是次协调的。参见关于相关逻辑、次协调逻辑和双面真理主义的词条。或者参见 Anderson 和 Belnap [1975], Anderson, Belnap, 和 Dunn [1992], 以及 Tennant [1997] 关于相关逻辑的更全面概述；以及 Priest [2006a,b] 关于双面真理主义的概述。这涉及关于逻辑后承本质的深刻哲学问题。作为哲学百科全书中的一篇文章，很难避免哲学问题，但篇幅限制排除了在这里对此问题进行更全面的处理。只要指出推论 *ex falso quodlibet* 在经典逻辑系统中得到认可就足够了，这也是本文的主题。它对于建立演绎系统与语义学之间的平衡至关重要（见下文 §5）。
 
-$D$ 的下一部分是量词的条款。设 $\theta$ 是一个公式，$v$ 是一个变项，$t$ 是一个词项（即，变项或常项）。然后定义 $\theta(v|t)$ 为将 $\theta$ 中 $v$ 的每个自由出现替换为 $t$ 的结果。所以，如果 $\theta$ 是 $(Qx \& \exists xPxy)$，那么 $\theta(x|c)$ 就是 $(Qc \& \exists xPxy)$。$x$ 的最后一次出现不是自由的。
+$D$ 的下一部分是量词的条款。设 $\theta$ 是一个公式，$v$ 是一个变项，$t$ 是一个词项（即，变项或常项）。然后定义 $\theta(v|t)$ 为将 $\theta$ 中 $v$ 的每个自由出现替换为 $t$ 的结果。所以，如果 $\theta$ 是 $(Qx \land \exists xPxy)$，那么 $\theta(x|c)$ 就是 $(Qc \land \exists xPxy)$。$x$ 的最后一次出现不是自由的。
 
 形式为 $\forall v \theta$ 的句子是英语“对于每个 $v, \theta$ 成立”的类似物。所以人们应该能够从 $\forall v \theta$ 推断出 $\theta(v|t)$，对于任何封闭词项 $t$。回想一下，我们在系统中的唯一封闭词项是常项。
 
@@ -306,11 +306,11 @@ $({=}\mathrm{E})$
 
 **引理 7**。如果 $\Gamma_1$ 和 $\Gamma_2$ 的区别仅在于：凡是 $\Gamma_1$ 包含 $\theta$ 的地方，$\Gamma_2$ 包含 $\theta(t|t')$，那么对于任何不包含 $t$ 或 $t'$ 的句子 $\phi$，如果 $\Gamma_1 \vdash \phi$ 那么 $\Gamma_2 \vdash \phi$。
 
-**证明**：证明通过对 $\phi$ 的证明步骤数进行归纳来进行。此证明的关键在于，只要 $\theta$ 不包含 $t$ 或 $t'$，就有 $\theta=\theta(t|t')$。当 $\phi$ 的证明步骤数为一时，这意味着应用的最后（且唯一）规则是 (As) 或 (=I)。那么，由于 $\phi$ 不包含 $t$ 或 $t'$，如果 $\Gamma_1 \vdash \phi$，我们只需对 $\Gamma_2$ 应用相同的规则（(As) 或 (=I)）即可得到 $\Gamma_2 \vdash \phi$。假设 $\phi$ 的证明有 $n>1$ 步，并且引理 7 对任何少于 $n$ 步的证明成立。假设应用于 $\Gamma_1$ 的第 $n$ 个规则是 $(\& I)$。那么 $\phi$ 是 $\psi \& \chi$，且 $\Gamma_1 \vdash \phi \& \chi$。但那时我们知道证明中的先前步骤包括 $\Gamma_1 \vdash \psi$ 和 $\Gamma_1 \vdash \chi$，根据归纳，我们有 $\Gamma_2 \vdash \psi$ 和 $\Gamma_2 \vdash \chi$，因为 $\psi$ 和 $\chi$ 都不包含 $t$ 或 $t'$。所以，我们只需对 $\Gamma_2$ 应用 $(\& I)$ 即可按要求得到 $\Gamma_2 \vdash \psi \& \chi$。现在假设在 $\Gamma_1 \vdash \phi$ 的证明中应用的最后一步是 $(\& E)$。那么，在 $\phi$ 的证明的先前步骤中，我们知道对于某个句子 $\psi$ 有 $\Gamma_1 \vdash \phi \& \psi$。如果 $\psi$ 不包含 $t$，那么我们只需对 $\Gamma_2$ 应用 $(\& E)$ 即可获得所需结果。唯一的复杂情况是如果 $\psi$ 包含 $t$。那么我们将有 $\Gamma_2 \vdash (\phi \& \psi)(t|t')$。但是，由于 $(\phi \& \psi)(t|t')$ 是 $\phi(t|t') \& \psi(t|t')$，而 $\phi(t|t')$ 就是 $\phi$，我们可以直接应用 $(\& E)$ 按要求得到 $\Gamma_2 \vdash \phi$。其他规则的情况类似。
+**证明**：证明通过对 $\phi$ 的证明步骤数进行归纳来进行。此证明的关键在于，只要 $\theta$ 不包含 $t$ 或 $t'$，就有 $\theta=\theta(t|t')$。当 $\phi$ 的证明步骤数为一时，这意味着应用的最后（且唯一）规则是 (As) 或 (=I)。那么，由于 $\phi$ 不包含 $t$ 或 $t'$，如果 $\Gamma_1 \vdash \phi$，我们只需对 $\Gamma_2$ 应用相同的规则（(As) 或 (=I)）即可得到 $\Gamma_2 \vdash \phi$。假设 $\phi$ 的证明有 $n>1$ 步，并且引理 7 对任何少于 $n$ 步的证明成立。假设应用于 $\Gamma_1$ 的第 $n$ 个规则是 $(\land I)$。那么 $\phi$ 是 $\psi \land \chi$，且 $\Gamma_1 \vdash \phi \land \chi$。但那时我们知道证明中的先前步骤包括 $\Gamma_1 \vdash \psi$ 和 $\Gamma_1 \vdash \chi$，根据归纳，我们有 $\Gamma_2 \vdash \psi$ 和 $\Gamma_2 \vdash \chi$，因为 $\psi$ 和 $\chi$ 都不包含 $t$ 或 $t'$。所以，我们只需对 $\Gamma_2$ 应用 $(\land I)$ 即可按要求得到 $\Gamma_2 \vdash \psi \land \chi$。现在假设在 $\Gamma_1 \vdash \phi$ 的证明中应用的最后一步是 $(\land E)$。那么，在 $\phi$ 的证明的先前步骤中，我们知道对于某个句子 $\psi$ 有 $\Gamma_1 \vdash \phi \land \psi$。如果 $\psi$ 不包含 $t$，那么我们只需对 $\Gamma_2$ 应用 $(\land E)$ 即可获得所需结果。唯一的复杂情况是如果 $\psi$ 包含 $t$。那么我们将有 $\Gamma_2 \vdash (\phi \land \psi)(t|t')$。但是，由于 $(\phi \land \psi)(t|t')$ 是 $\phi(t|t') \land \psi(t|t')$，而 $\phi(t|t')$ 就是 $\phi$，我们可以直接应用 $(\land E)$ 按要求得到 $\Gamma_2 \vdash \phi$。其他规则的情况类似。
 
 **定理 8**。弱化规则（The rule of Weakening）。如果 $\Gamma_1 \vdash \phi$ 且 $\Gamma_1 \subseteq \Gamma_2$，那么 $\Gamma_2 \vdash \phi$。
 
-**证明**：再次，我们对用于得出 $\Gamma_1 \vdash \phi$ 的规则数量进行归纳。假设 $n>0$ 是一个自然数，并且该定理对任何使用少于 $n$ 条规则导出的论证成立。假设 $\Gamma_1 \vdash \phi$ 恰好使用了 $n$ 条规则。如果 $n=1$，那么规则要么是 (As) 要么是 $(=$I)。在这些情况下，通过相同的规则有 $\Gamma_2 \vdash \phi$。如果应用的最后一条规则是 (&I)，那么 $\phi$ 的形式为 $(\theta \& \psi)$，并且我们有 $\Gamma_3 \vdash \theta$ 和 $\Gamma_4 \vdash \psi$，其中 $\Gamma_1 = \Gamma_3, \Gamma_4$。我们将归纳假设应用于 $\theta$ 和 $\psi$ 的推导，得到 $\Gamma_2 \vdash \theta$ 和 $\Gamma_2 \vdash \psi$，然后将 (&I) 应用于结果得到 $\Gamma_2 \vdash \phi$。大多数其他情况完全像这样。只有在规则 $(\forall$I) 和 $(\exists$E) 中会出现轻微的复杂情况，因为那里我们必须注意规则的条件。
+**证明**：再次，我们对用于得出 $\Gamma_1 \vdash \phi$ 的规则数量进行归纳。假设 $n>0$ 是一个自然数，并且该定理对任何使用少于 $n$ 条规则导出的论证成立。假设 $\Gamma_1 \vdash \phi$ 恰好使用了 $n$ 条规则。如果 $n=1$，那么规则要么是 (As) 要么是 $(=$I)。在这些情况下，通过相同的规则有 $\Gamma_2 \vdash \phi$。如果应用的最后一条规则是 (&I)，那么 $\phi$ 的形式为 $(\theta \land \psi)$，并且我们有 $\Gamma_3 \vdash \theta$ 和 $\Gamma_4 \vdash \psi$，其中 $\Gamma_1 = \Gamma_3, \Gamma_4$。我们将归纳假设应用于 $\theta$ 和 $\psi$ 的推导，得到 $\Gamma_2 \vdash \theta$ 和 $\Gamma_2 \vdash \psi$，然后将 (&I) 应用于结果得到 $\Gamma_2 \vdash \phi$。大多数其他情况完全像这样。只有在规则 $(\forall$I) 和 $(\exists$E) 中会出现轻微的复杂情况，因为那里我们必须注意规则的条件。
 
 假设用于得到 $\Gamma_1 \vdash \phi$ 的最后一条规则是 $(\forall$I)。所以 $\phi$ 是形式为 $\forall v\theta$ 的句子，并且我们有 $\Gamma_1 \vdash \theta (v|t)$ 且 $t$ 不出现在 $\Gamma_1$ 的任何成员中或 $\theta$ 中。问题是 $t$ 可能出现在 $\Gamma_2$ 的成员中，所以我们不能直接援引归纳假设并将 $(\forall$I) 应用于结果。所以，设 $t'$ 为不出现在 $\Gamma_2$ 中任何句子中的词项。设 $\Gamma'$ 为在 $\Gamma_2$ 中用 $t'$ 替换所有 $t$ 的结果。那么，由于 $t$ 不出现在 $\Gamma_1$ 中，$\Gamma_1 \subseteq \Gamma'$。所以，归纳假设给我们 $\Gamma' \vdash \theta (v|t)$，并且我们知道 $\Gamma'$ 不包含 $t$，所以我们可以应用 $(\forall I)$ 得到 $\Gamma' \vdash \forall v\theta$。但是 $\forall v\theta$ 不包含 $t$ 或 $t'$，所以根据引理 7，$\Gamma_2 \vdash \forall v\theta$。
 
@@ -328,7 +328,7 @@ $({=}\mathrm{E})$
 
 **定理 11**。剪切规则（The rule of Cut）。如果 $\Gamma_1 \vdash \psi$ 且 $\Gamma_2, \psi \vdash \theta$，那么 $\Gamma_1, \Gamma_2 \vdash \theta$。
 
-**证明**：假设 $\Gamma_1 \vdash \psi$ 且 $\Gamma_2, \psi \vdash \theta$。我们对用于建立 $\Gamma_2, \psi \vdash \theta$ 的规则数量进行归纳。假设 $n$ 是一个自然数，并且该定理对任何使用少于 $n$ 条规则导出的论证成立。假设 $\Gamma_2, \psi \vdash \theta$ 恰好使用了 $n$ 条规则。如果使用的最后一条规则是 $(=$I)，那么 $\Gamma_1, \Gamma_2 \vdash \theta$ 也是 $(=$I) 的一个实例。如果 $\Gamma_2, \psi \vdash \theta$ 是 (As) 的一个实例，那么要么 $\theta$ 是 $\psi$，要么 $\theta$ 是 $\Gamma_2$ 的成员。在前一种情况下，我们要有 $\Gamma_1 \vdash \theta$ 根据假设，并通过弱化（定理 8）得到 $\Gamma_1, \Gamma_2 \vdash \theta$。在后一种情况下，$\Gamma_1, \Gamma_2 \vdash \theta$ 本身就是 (As) 的一个实例。假设 $\Gamma_2, \psi \vdash \theta$ 是使用 (&E) 获得的。那么我们有 $\Gamma_2, \psi \vdash (\theta \& \phi)$。归纳假设给我们 $\Gamma_1, \Gamma_2 \vdash (\theta \& \phi)$，并且 (&E) 产生 $\Gamma_1, \Gamma_2 \vdash \theta$。其余情况类似。
+**证明**：假设 $\Gamma_1 \vdash \psi$ 且 $\Gamma_2, \psi \vdash \theta$。我们对用于建立 $\Gamma_2, \psi \vdash \theta$ 的规则数量进行归纳。假设 $n$ 是一个自然数，并且该定理对任何使用少于 $n$ 条规则导出的论证成立。假设 $\Gamma_2, \psi \vdash \theta$ 恰好使用了 $n$ 条规则。如果使用的最后一条规则是 $(=$I)，那么 $\Gamma_1, \Gamma_2 \vdash \theta$ 也是 $(=$I) 的一个实例。如果 $\Gamma_2, \psi \vdash \theta$ 是 (As) 的一个实例，那么要么 $\theta$ 是 $\psi$，要么 $\theta$ 是 $\Gamma_2$ 的成员。在前一种情况下，我们要有 $\Gamma_1 \vdash \theta$ 根据假设，并通过弱化（定理 8）得到 $\Gamma_1, \Gamma_2 \vdash \theta$。在后一种情况下，$\Gamma_1, \Gamma_2 \vdash \theta$ 本身就是 (As) 的一个实例。假设 $\Gamma_2, \psi \vdash \theta$ 是使用 (&E) 获得的。那么我们有 $\Gamma_2, \psi \vdash (\theta \land \phi)$。归纳假设给我们 $\Gamma_1, \Gamma_2 \vdash (\theta \land \phi)$，并且 (&E) 产生 $\Gamma_1, \Gamma_2 \vdash \theta$。其余情况类似。
 
 定理 11 允许我们将推论串联起来。这符合建立定理和引理，然后随意在后面使用这些定理和引理的实践。有些人认为，剪切原则对于推理至关重要。在某些逻辑系统中，剪切原则是一个深刻的定理；在其他系统中它是无效的。这里的系统设计部分是为了使定理 11 的证明直截了当。
 
@@ -386,7 +386,7 @@ $({=}\mathrm{E})$
 
 $M,s\vDash \neg \theta$ 当且仅当并非 $M,s\vDash \theta$。
 
-$M,s\vDash (\theta \& \psi)$ 当且仅当 $M,s\vDash \theta$ 且 $M,s\vDash \psi$。
+$M,s\vDash (\theta \land \psi)$ 当且仅当 $M,s\vDash \theta$ 且 $M,s\vDash \psi$。
 
 $M,s\vDash (\theta \vee \psi)$ 当且仅当 $M,s\vDash \theta$ 或 $M,s\vDash \psi$。
 
@@ -440,7 +440,7 @@ $M\vDash \theta$ 其中 $\theta$ 是句子，当且仅当对于所有变项赋�
 
 **定理 18**。可靠性（Soundness）。对于任何句子 $\theta$ 和句子集 $\Gamma$，如果 $\Gamma \vdash_D \theta$，那么 $\Gamma \vDash \theta$。
 
-**证明**：我们对用于建立 $\Gamma \vdash \theta$ 的条款数量进行归纳。所以设 $n$ 为一个自然数，并假设该定理对任何以少于 $n$ 步建立为演绎有效的论证成立。并假设 $\Gamma \vdash \theta$ 恰好使用了 $n$ 步。如果应用的最后一条规则是 $(=$I) 那么 $\theta$ 是形式为 $t=t$ 的句子，所以 $\theta$ 是逻辑真的。更不用说，$\Gamma \vDash \theta$。如果应用的最后一条规则是 (As)，那么 $\theta$ 是 $\Gamma$ 的成员，所以当然任何满足 $\Gamma$ 每个成员的解释也满足 $\theta$。假设应用的最后一条规则是 (&I)。所以 $\theta$ 具有形式 $(\phi \& \psi)$，并且我们有 $\Gamma_1 \vdash \phi$ 和 $\Gamma_2 \vdash \psi$，其中 $\Gamma = \Gamma_1, \Gamma_2$。归纳假设给我们 $\Gamma_1 \vDash \phi$ 和 $\Gamma_2 \vDash \psi$。假设 $M$ 满足 $\Gamma$ 的每个成员。那么 $M$ 满足 $\Gamma_1$ 的每个成员，所以 $M$ 满足 $\phi$。同样，$M$ 满足 $\Gamma_2$ 的每个成员，所以 $M$ 满足 $\psi$。因此，根据满足定义中的“$\&$”条款，$M$ 满足 $\theta$。所以 $\Gamma \vDash \theta$。
+**证明**：我们对用于建立 $\Gamma \vdash \theta$ 的条款数量进行归纳。所以设 $n$ 为一个自然数，并假设该定理对任何以少于 $n$ 步建立为演绎有效的论证成立。并假设 $\Gamma \vdash \theta$ 恰好使用了 $n$ 步。如果应用的最后一条规则是 $(=$I) 那么 $\theta$ 是形式为 $t=t$ 的句子，所以 $\theta$ 是逻辑真的。更不用说，$\Gamma \vDash \theta$。如果应用的最后一条规则是 (As)，那么 $\theta$ 是 $\Gamma$ 的成员，所以当然任何满足 $\Gamma$ 每个成员的解释也满足 $\theta$。假设应用的最后一条规则是 (&I)。所以 $\theta$ 具有形式 $(\phi \land \psi)$，并且我们有 $\Gamma_1 \vdash \phi$ 和 $\Gamma_2 \vdash \psi$，其中 $\Gamma = \Gamma_1, \Gamma_2$。归纳假设给我们 $\Gamma_1 \vDash \phi$ 和 $\Gamma_2 \vDash \psi$。假设 $M$ 满足 $\Gamma$ 的每个成员。那么 $M$ 满足 $\Gamma_1$ 的每个成员，所以 $M$ 满足 $\phi$。同样，$M$ 满足 $\Gamma_2$ 的每个成员，所以 $M$ 满足 $\psi$。因此，根据满足定义中的“$\land$”条款，$M$ 满足 $\theta$。所以 $\Gamma \vDash \theta$。
 
 假设应用的最后一个条款是 $(\exists\mathrm{E})$。所以我们有 $\Gamma_1 \vdash \exists v\phi$ 和 $\Gamma_2, \phi(v|t) \vdash \theta$，其中 $\Gamma = \Gamma_1, \Gamma_2$，且 $t$ 不出现在 $\phi, \theta$ 或 $\Gamma_2$ 的任何成员中。
 
@@ -630,7 +630,7 @@ $$ \Phi, \neg\Phi \vdash \Psi $$
 
 另一个偏爱次协调逻辑（或多种次协调逻辑）的主要逻辑学家阵营是双面真理主义（dialetheism）的拥护者，即认为某些矛盾，某些形式为
 
-$$ (\Phi \& \neg \Phi) $$
+$$ (\Phi \land \neg \Phi) $$
 
 的句子是真的。一个假定的例子是当 $\Phi$ 是语义悖论的陈述时，例如说谎者悖论。例如，考虑一个说 $\Phi$ 不为真的句子 $\Phi$。
 
