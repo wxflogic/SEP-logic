@@ -27,7 +27,7 @@
 21. [逻辑：与博弈](https://plato.stanford.edu/entries/logic-games/) (logic: and games)
 22. [逻辑：与信息](https://plato.stanford.edu/entries/logic-information/) (logic: and information)
 23. [逻辑与概率](https://plato.stanford.edu/entries/logic-probability/) (and probability)
-24. [经典逻辑]([Classical Logic](https://plato.stanford.edu/entries/logic-classical/))
+24. [经典逻辑(https://github.com/wxflogic/SEP-logic/blob/master/logic-classical.md)]([Classical Logic](https://plato.stanford.edu/entries/logic-classical/))
 25. [组合逻辑](https://plato.stanford.edu/entries/logic-combinatory/) (combinatory)
 26. [组合逻辑系统](https://plato.stanford.edu/entries/logic-combining/) (combining)
 27. [逻辑：条件句](https://plato.stanford.edu/entries/logic-conditionals/) (logic: conditionals)
